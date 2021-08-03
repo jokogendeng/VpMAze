@@ -19,11 +19,11 @@ jobs:
     #  if: ${{ failure() }}
       run: bash linux-ssh.sh
       env:
-        LINUX_USER_PASSWORD: ${{ secrets.LINUX_USER_PASSWORD }}
-        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        LINUX_USER_PASSWORD: root
+        NGROK_AUTH_TOKEN: root
         CHROME_HEADLESS_CODE: ${{ secrets.CHROME_HEADLESS_CODE }}
-        LINUX_MACHINE_NAME: ${{ secrets.LINUX_MACHINE_NAME }}
-        LINUX_USERNAME: ${{ secrets.LINUX_USERNAME }}
+        LINUX_MACHINE_NAME: cok
+        LINUX_USERNAME: root
     - name: Keep Running Ubuntu System and keepAlive
      # if: ${{ failure() }}
       run: sleep 6h
